@@ -15,7 +15,8 @@ Dialog {
 
         model: ListModel {
             ListElement { url: "https://forums.puri.sm/"; title: "PureOS"}
-            ListElement { url: "https://forum.f-droid.org/"; title: "FDroid"}
+            ListElement { url: "https://forum.f-droid.org/"; title: "FDroid - Categories bugged"}
+            ListElement { url: "https://discourse.ubuntu.com/"; title: "Ubuntu"}
             ListElement { url: "https://forum.sailfishos.org/"; title: "SFOS Forum"}
 
         }
