@@ -14,10 +14,18 @@ Dialog {
         anchors.fill: parent
 
         model: ListModel {
+            ListElement { url: "https://discussion.fedoraproject.org/"; title: "Fedora"}
+            ListElement { url: "https://discuss.codecademy.com/"; title: "Code academy"}
+            ListElement { url: "https://forums.docker.com/"; title: "Docker"}
+            ListElement { url: "https://discuss.emberjs.com/"; title: "Ember.js"}
+            ListElement { url: "https://forum.f-droid.org/"; title: "FDroid"}
+            ListElement { url: "https://discuss.atom.io/"; title: "Github Atom"}
+            ListElement { url: "https://discuss.ocaml.org/"; title: "OCaml"}
             ListElement { url: "https://forums.puri.sm/"; title: "PureOS"}
-            ListElement { url: "https://forum.f-droid.org/"; title: "FDroid - Categories bugged"}
+            ListElement { url: "https://users.rust-lang.org/"; title: "Rust"}
             ListElement { url: "https://discourse.ubuntu.com/"; title: "Ubuntu"}
             ListElement { url: "https://forum.sailfishos.org/"; title: "SFOS Forum"}
+
 
         }
 
