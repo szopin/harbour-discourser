@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=harbour-discourser
+Exec=sailfish-qml harbour-discourser
+Name=Discourser
+# translation example:
+# your app name in German locale (de)
+#
