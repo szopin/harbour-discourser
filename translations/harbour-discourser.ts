@@ -103,7 +103,7 @@ Special thanks to contributors:
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="157"/>
-        <source>URL</source>
+        <source>Change forum</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -195,6 +195,20 @@ Special thanks to contributors:
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="171"/>
         <source>Search in the current thread</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SitePage</name>
+    <message>
+        <location filename="../qml/pages/SitePage.qml" line="48"/>
+        <source>Custom URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SitePage.qml" line="49"/>
+        <source>Just part between second and third slash
+(no &quot;https://&quot; and no trailing slash)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

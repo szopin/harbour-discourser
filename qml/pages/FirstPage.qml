@@ -154,7 +154,7 @@ Page {
                 onClicked: pageStack.push("About.qml");
             }
             MenuItem {
-                text: qsTr("URL")
+                text: qsTr("Change forum")
                 onClicked: pageStack.push("SitePage.qml");
             }
             MenuItem {

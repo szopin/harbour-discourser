@@ -29,9 +29,39 @@ Dialog {
 
         }
 
-        header: PageHeader {
-            id: pageHeader
-            title: "Select site"
+        header: headercomponent
+        Component {
+            id: headercomponent
+            Column {
+                id: column
+                width: parent.width
+                height: childrenRect.height
+                spacing: Theme.paddingMedium
+                PageHeader {
+                    id: pageHeader
+                    title: "Select site"
+                }
+                TextField {
+                    id: customUrl
+
+                    anchors { left: parent.left; right: parent.right }
+                    placeholderText: qsTr("Custom URL")
+                    label: qsTr("Just part between second and third slash\n(no \"https:\/\/\" and no trailing slash)")
+                    labelVisible: true
+                    inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText | Qt.ImhUrlCharactersOnly
+                    validator: RegExpValidator { regExp: /^[A-Za-z0-9_\-.:]{1,200}/ }
+
+                    errorHighlight: activeFocus && !acceptableInput
+                    EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+                    EnterKey.onClicked: {
+                        application.source = "https:\/\/" + text + "\/"
+                        categories.fetch();
+
+                        findFirstPage().showLatest();
+                        dialog.accept()
+                    }
+                }
+            }
         }
 
 
