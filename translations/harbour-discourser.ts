@@ -201,12 +201,12 @@ Special thanks to contributors:
 <context>
     <name>SitePage</name>
     <message>
-        <location filename="../qml/pages/SitePage.qml" line="48"/>
+        <location filename="../qml/pages/SitePage.qml" line="50"/>
         <source>Custom URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SitePage.qml" line="49"/>
+        <location filename="../qml/pages/SitePage.qml" line="51"/>
         <source>Just part between second and third slash
 (no &quot;https://&quot; and no trailing slash)</source>
         <translation type="unfinished"></translation>
