@@ -88,7 +88,7 @@ Page {
                            "Licensed under MIT\n\n" +
                            "App icon by dseight\n" +
                            "Special thanks to contributors:\n").arg(application.appVersion) +
-                      ["carlosgonz", "elros34", "ichthyosaurus", "mentaljam", "Moppa5"].join(
+                      ["Åke Engelbrektson", "carlosgonz", "elros34", "ichthyosaurus", "mentaljam", "Moppa5"].join(
                           //: contributors list separator
                           qsTr(", "));
             }
