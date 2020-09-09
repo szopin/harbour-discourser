@@ -27,6 +27,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import Nemo.Configuration 1.0
 import "pages"
 
 ApplicationWindow
@@ -43,9 +44,9 @@ ApplicationWindow
 
     property bool fetching: false
     property var latest: ListModel{id: latest}
-    property string source: "https://forum.sailfishos.org/"
     //: date format including date and time but no weekday
     readonly property string dateTimeFormat: qsTr("d/M/yyyy '('hh':'mm')'")
+    readonly property string _configPath: "/org/szopin/harbour-discourser/"
 
     property QtObject categories: QtObject {
         property bool networkError: false
@@ -54,7 +55,7 @@ ApplicationWindow
 
         function fetch() {
             var xhr = new XMLHttpRequest;
-            xhr.open("GET", application.source + "categories.json");
+            xhr.open("GET", forumSource.value + "categories.json");
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     if (xhr.responseText === "") {
@@ -100,13 +101,12 @@ ApplicationWindow
     function formatJsonDate(date) {
         return new Date(date).toLocaleString(Qt.locale(), dateTimeFormat);
     }
-       onSourceChanged: fetchLatestPosts()
 
     function fetchLatestPosts() {
         application.latest.clear()
         fetching = true
         var xhr = new XMLHttpRequest;
-        xhr.open("GET", source + "latest.json");
+        xhr.open("GET", forumSource.value + "latest.json");
         xhr.onreadystatechange = function() {
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 if (xhr.responseText !== "") {
@@ -131,5 +131,13 @@ ApplicationWindow
     Component.onCompleted: {
         categories.fetch();
         fetchLatestPosts();
+    }
+
+    ConfigurationValue {
+        id: forumSource
+        key: _configPath + "source"
+        defaultValue: "https://forum.sailfishos.org/"
+
+        onValueChanged: fetchLatestPosts()
     }
 }
