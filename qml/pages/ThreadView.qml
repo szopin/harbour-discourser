@@ -35,7 +35,7 @@ Page {
     property int post_id
     property int highest_post_number
     property int post_number
-    readonly property string source: application.source + "t/" + topicid
+    readonly property string source: forumSource.value + "t/" + topicid
     property string loadmore: source + "/posts.json?post_ids[]="
     property int topicid
     property string url

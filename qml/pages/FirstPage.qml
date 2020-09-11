@@ -36,7 +36,7 @@ Page {
     property int pageno: 0
     property string viewmode
     property string textname
-    property string combined: application.source + (tid ? "c/" + tid : viewmode) + ".json?page=" + pageno
+    property string combined: forumSource.value + (tid ? "c/" + tid : viewmode) + ".json?page=" + pageno
     property bool networkError: false
     property bool loadedMore: false
 

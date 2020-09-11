@@ -62,7 +62,7 @@ Dialog {
                     errorHighlight: activeFocus && !acceptableInput
                     EnterKey.iconSource: "image://theme/icon-m-enter-accept"
                     EnterKey.onClicked: {
-                        application.source = "https:\/\/" + text + "\/"
+                        forumSource.value = "https:\/\/" + text + "\/"
                         categories.fetch();
 
                         findFirstPage().showLatest();
@@ -97,7 +97,7 @@ Dialog {
 
             }
             onClicked: {
-                application.source = url
+                forumSource.value = url
                 categories.fetch();
 
                 findFirstPage().showLatest();

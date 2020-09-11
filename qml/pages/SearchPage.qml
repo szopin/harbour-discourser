@@ -34,7 +34,7 @@ Page {
     property int searchid
     property string aTitle
     readonly property string searchstring: {
-        var res = application.source + "search.json?"
+        var res = forumSource.value + "search.json?"
         if (searchid) {
             res += "context=topic&context_id=" + searchid + "&"
         }
