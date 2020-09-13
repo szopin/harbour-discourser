@@ -13,14 +13,11 @@
         <source>Discourser for Sailfish OS v%1
 By szopin
 Licensed under MIT
+
 App icon by dseight
 Special thanks to contributors:
 </source>
-        <translation>旗鱼系统版 Discourserv%1
-开发者为 sszpoin
-采用 MIT 许可协议
-软件图标由 dseight 绘制
-特别感谢贡献者们：</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="93"/>
@@ -236,8 +233,6 @@ Special thanks to contributors:
         <location filename="../qml/pages/ThreadView.qml" line="174"/>
         <source>%n like(s)</source>
         <translation>
-            <numerusform>%n 个赞</numerusform>
-            <numerusform>%n 个赞</numerusform>
             <numerusform>%n 个赞</numerusform>
         </translation>
     </message>

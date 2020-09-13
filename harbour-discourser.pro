@@ -42,5 +42,6 @@ CONFIG += sailfishapp_i18n
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += \
     translations/harbour-discourser-ru.ts \
-    translations/harbour-discourser-sv.ts
+    translations/harbour-discourser-sv.ts \
+    translations/harbour-discourser-zh_CN.ts
 
