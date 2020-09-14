@@ -137,7 +137,7 @@ Page {
         header: PageHeader {
             id: header
             title: textname === "" ? viewmode : textname
-          //  description: qsTr("SailfishOS Forum")
+            description: forumTitle.value || forumSource.value
         }
 
         footer: Item {

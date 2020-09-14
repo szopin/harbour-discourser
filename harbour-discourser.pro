@@ -16,6 +16,7 @@ CONFIG += sailfishapp_qml
 
 DISTFILES += qml/harbour-discourser.qml \
     qml/cover/CoverPage.qml \
+    qml/forums.js \
     qml/pages/About.qml \
     qml/pages/CategorySelect.qml \
     qml/pages/FirstPage.qml \
