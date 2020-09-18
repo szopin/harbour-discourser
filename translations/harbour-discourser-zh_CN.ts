@@ -201,12 +201,12 @@ Special thanks to contributors:
 <context>
     <name>SitePage</name>
     <message>
-        <location filename="../qml/pages/SitePage.qml" line="56"/>
+        <location filename="../qml/pages/SitePage.qml" line="34"/>
         <source>Custom URL</source>
         <translation>自定义超链接</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SitePage.qml" line="57"/>
+        <location filename="../qml/pages/SitePage.qml" line="35"/>
         <source>Just part between second and third slash
 (no &quot;https://&quot; and no trailing slash)</source>
         <translation>分离第二及第三部分 slash</translation>
@@ -250,7 +250,7 @@ Special thanks to contributors:
 <context>
     <name>harbour-discourser</name>
     <message>
-        <location filename="../qml/harbour-discourser.qml" line="48"/>
+        <location filename="../qml/harbour-discourser.qml" line="49"/>
         <source>d/M/yyyy &apos;(&apos;hh&apos;:&apos;mm&apos;)&apos;</source>
         <extracomment>date format including date and time but no weekday</extracomment>
         <translation>yyyy/M/d &apos;(&apos;hh&apos;:&apos;mm&apos;)&apos;</translation>

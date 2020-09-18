@@ -207,12 +207,12 @@ Speciellt tack till medverkande:
 <context>
     <name>SitePage</name>
     <message>
-        <location filename="../qml/pages/SitePage.qml" line="56"/>
+        <location filename="../qml/pages/SitePage.qml" line="34"/>
         <source>Custom URL</source>
         <translation>Anpassad URL</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SitePage.qml" line="57"/>
+        <location filename="../qml/pages/SitePage.qml" line="35"/>
         <source>Just part between second and third slash
 (no &quot;https://&quot; and no trailing slash)</source>
         <translation>Bara delen mellan andra och tredje snedstrecket
@@ -258,7 +258,7 @@ Speciellt tack till medverkande:
 <context>
     <name>harbour-discourser</name>
     <message>
-        <location filename="../qml/harbour-discourser.qml" line="48"/>
+        <location filename="../qml/harbour-discourser.qml" line="49"/>
         <source>d/M/yyyy &apos;(&apos;hh&apos;:&apos;mm&apos;)&apos;</source>
         <extracomment>date format including date and time but no weekday</extracomment>
         <translation>yyyy-M-d (hh:mm)</translation>
