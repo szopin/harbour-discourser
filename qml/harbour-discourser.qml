@@ -29,6 +29,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import Nemo.Configuration 1.0
 import "pages"
+import "forums.js" as Forums
 
 ApplicationWindow
 {
@@ -136,8 +137,16 @@ ApplicationWindow
     ConfigurationValue {
         id: forumSource
         key: _configPath + "source"
-        defaultValue: "https://forum.sailfishos.org/"
+        defaultValue: Forums.defaultSource
 
         onValueChanged: fetchLatestPosts()
+    }
+
+    ConfigurationValue {
+        id: forumTitle
+        key: _configPath + "title"
+        defaultValue: forumSource.value === Forums.defaultSource
+                      ? Forums.defaultTitle
+                      : undefined
     }
 }

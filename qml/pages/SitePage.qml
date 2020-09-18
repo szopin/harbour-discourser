@@ -1,6 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-
+import '../forums.js' as Forums
 
 Dialog {
     id: dialog
@@ -13,29 +13,7 @@ Dialog {
         id: sitelist
         anchors.fill: parent
 
-        model: ListModel {
-
-
-            ListElement { url: "https://discuss.codecademy.com/"; title: "Code academy"}
-            ListElement { url: "https://forums.docker.com/"; title: "Docker"}
-            ListElement { url: "https://community.e.foundation/"; title: "/e/ Foundation"}
-            ListElement { url: "https://discuss.emberjs.com/"; title: "Ember.js"}
-            ListElement { url: "https://forum.f-droid.org/"; title: "FDroid"}
-            ListElement { url: "https://discussion.fedoraproject.org/"; title: "Fedora"}
-            ListElement { url: "https://discuss.atom.io/"; title: "Github Atom"}
-            ListElement { url: "https://we.incognito.org/"; title: "Incognito"}
-            ListElement { url: "https://forum.manjaro.org/"; title: "Manjaro"}
-            ListElement { url: "https://discuss.ocaml.org/"; title: "OCaml"}
-            ListElement { url: "https://forum.openwrt.org/"; title: "OpenWrt"}
-            ListElement { url: "https://discuss.pixls.us/"; title: "PIXLS.US"}
-            ListElement { url: "https://forums.puri.sm/"; title: "PureOS"}
-            ListElement { url: "https://users.rust-lang.org/"; title: "Rust"}
-            ListElement { url: "https://discuss.tindie.com/"; title: "Tindie"}
-            ListElement { url: "https://discourse.ubuntu.com/"; title: "Ubuntu"}
-            ListElement { url: "https://forum.sailfishos.org/"; title: "SFOS Forum"}
-
-
-        }
+        model: Forums.list
 
         header: headercomponent
         Component {
@@ -62,6 +40,7 @@ Dialog {
                     errorHighlight: activeFocus && !acceptableInput
                     EnterKey.iconSource: "image://theme/icon-m-enter-accept"
                     EnterKey.onClicked: {
+                        forumTitle.value = ""
                         forumSource.value = "https:\/\/" + text + "\/"
                         categories.fetch();
 
@@ -88,16 +67,17 @@ Dialog {
                 Label {
                     anchors { left: parent.left; right: parent.right; }
                     font.bold: true
-                    text: title
+                    text: modelData.title
                 }
                 Label {
                     anchors { left: parent.left; right: parent.right; }
-                    text: url
+                    text: modelData.url
                 }
 
             }
             onClicked: {
-                forumSource.value = url
+                forumTitle.value = modelData.title
+                forumSource.value = modelData.url
                 categories.fetch();
 
                 findFirstPage().showLatest();
