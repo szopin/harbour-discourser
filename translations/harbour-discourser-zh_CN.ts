@@ -17,7 +17,12 @@ Licensed under MIT
 App icon by dseight
 Special thanks to contributors:
 </source>
-        <translation type="unfinished"></translation>
+        <translation>适用于旗鱼系统 v%1 的 Discouurser
+开发者为 szopin
+采用 MIT 许可协议
+
+图标设计者为 dseight
+特别感谢贡献者们：</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="93"/>
@@ -94,7 +99,7 @@ Special thanks to contributors:
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="105"/>
         <source>Top</source>
-        <translation>顶部</translation>
+        <translation>排行</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="153"/>
