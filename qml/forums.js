@@ -13,6 +13,7 @@ var list = [
     { url: "https://discuss.atom.io/",              title: "Github Atom"},
     { url: "https://we.incognito.org/",             title: "Incognito"},
     { url: "https://forum.manjaro.org/",            title: "Manjaro"},
+    { url: "https://help.nextcloud.com/",            title: "Nextcloud"},
     { url: "https://discuss.ocaml.org/",            title: "OCaml"},
     { url: "https://forum.openwrt.org/",            title: "OpenWrt"},
     { url: "https://discuss.pixls.us/",             title: "PIXLS.US"},
