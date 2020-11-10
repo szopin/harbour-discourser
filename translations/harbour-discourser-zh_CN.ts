@@ -66,7 +66,7 @@ Special thanks to contributors:
     <message>
         <location filename="../qml/pages/CategorySelect.qml" line="76"/>
         <source>Top</source>
-        <translation>顶部</translation>
+        <translation>排行</translation>
     </message>
 </context>
 <context>
