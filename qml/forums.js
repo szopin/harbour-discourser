@@ -21,5 +21,6 @@ var list = [
     { url: "https://users.rust-lang.org/",          title: "Rust"},
     { url: "https://discuss.tindie.com/",           title: "Tindie"},
     { url: "https://discourse.ubuntu.com/",         title: "Ubuntu"},
+    { url: "https://discuss.zerotier.com/",         title: "ZeroTierOne"},
     { url: defaultSource,                           title: defaultTitle},
 ]
