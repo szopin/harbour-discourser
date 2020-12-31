@@ -40,7 +40,7 @@ ApplicationWindow
     // ================================
     // ATTENTION: UPDATE BEFORE RELEASE
     // --------------------------------
-    readonly property string appVersion: "0.4.10"
+    readonly property string appVersion: "0.4.11"
     // ================================
 
     property bool fetching: false
@@ -76,7 +76,8 @@ ApplicationWindow
                             topic: item['id'],
                             color: item['color'],
                             topic_count: item['topic_count'],
-                            description_text: item['description_text']
+                            description_text: item['description_text'],
+                            slug: item['slug']
                         };
 
                         lookup[item['id']] = append;

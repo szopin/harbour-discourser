@@ -19,6 +19,7 @@ var list = [
     { url: "https://discuss.pixls.us/",             title: "PIXLS.US"},
     { url: "https://forums.puri.sm/",               title: "PureOS"},
     { url: "https://users.rust-lang.org/",          title: "Rust"},
+    { url: "https://discourse.differentk.fyi/",     title: "SpecialK"},
     { url: "https://discuss.tindie.com/",           title: "Tindie"},
     { url: "https://discourse.ubuntu.com/",         title: "Ubuntu"},
     { url: "https://discuss.zerotier.com/",         title: "ZeroTierOne"},
