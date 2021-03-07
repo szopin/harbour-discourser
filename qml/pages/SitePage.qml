@@ -7,7 +7,7 @@ Dialog {
     property string site
 
     function findFirstPage() {
-        return pageStack.find(function(page) { return (page._depth === 0); });
+        return pageStack.find(function(page) { return page.hasOwnProperty('viewmode'); });
     }
     SilicaListView {
         id: sitelist
