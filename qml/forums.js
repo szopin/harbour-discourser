@@ -11,6 +11,7 @@ var list = [
     { url: "https://forum.f-droid.org/",            title: "FDroid"},
     { url: "https://discussion.fedoraproject.org/", title: "Fedora"},
     { url: "https://discuss.atom.io/",              title: "Github Atom"},
+    { url: "https://community.home-assistant.io/",  title: "Home Assistant"},
     { url: "https://we.incognito.org/",             title: "Incognito"},
     { url: "https://forum.manjaro.org/",            title: "Manjaro"},
     { url: "https://mixxx.discourse.group/",        title: "MIXXX"},
