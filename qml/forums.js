@@ -6,6 +6,7 @@ var defaultTitle  = "SFOS Forum"
 var list = [
     { url: "https://discuss.codecademy.com/",       title: "Code academy"},
     { url: "https://forums.docker.com/",            title: "Docker"},
+    { url: "https://meta.discourse.org/",           title: "Discourse"},
     { url: "https://community.e.foundation/",       title: "/e/ Foundation"},
     { url: "https://discuss.emberjs.com/",          title: "Ember.js"},
     { url: "https://forum.f-droid.org/",            title: "FDroid"},

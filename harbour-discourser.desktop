@@ -7,3 +7,5 @@ Name=Discourser
 # translation example:
 # your app name in German locale (de)
 #
+[X-Sailjail]
+Permissions=Internet;WebView
