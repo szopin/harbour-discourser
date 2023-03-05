@@ -42,6 +42,7 @@ Page {
     property int last_post: 0
     property int post_number: -1
     property string aTitle
+    property string raw
     property int posts_count
     property var reply_to
     property bool accepted_answer
@@ -69,6 +70,18 @@ Page {
             last_post = post.post_number;
         }
     }
+    function getraw(postid, oper){
+            var xhr = new XMLHttpRequest;
+            xhr.open("GET", forumSource.value + "posts/" + postid + ".json");
+                       xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE){   var data = JSON.parse(xhr.responseText);
+                    raw = data["raw"];
+                    if (oper == 1) Clipboard.text = raw;
+                    return raw;
+                }
+            }
+            xhr.send();
+        }
     function findOP(filter){
         console.log(commodel.count)
         for (var j=0; j < commodel.count; j++){
@@ -239,7 +252,14 @@ Page {
                 }
             }
             menu: ContextMenu {
-                hasContent: (version > 1 && updated_at !== created_at) || (cooked.indexOf("<code") !== -1) || (reply_to > 0 && reply_to !== last_postid)
+                MenuItem{
+                    text: qsTr("Copy to clipboard");
+                    onClicked: getraw(postid, 1);
+                }
+                MenuItem {
+                    text: qsTr("Copy link to clipboard")
+                    onClicked: Clipboard.text = source + "/" + post_number
+                }
                 MenuItem {
                     visible: version > 1 && updated_at !== created_at
                     text: qsTr("Revision history")
