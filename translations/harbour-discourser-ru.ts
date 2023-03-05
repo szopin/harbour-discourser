@@ -256,17 +256,17 @@ Special thanks to contributors:
         <translation>✍️: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="244"/>
+        <location filename="../qml/pages/ThreadView.qml" line="245"/>
         <source>Revision history</source>
         <translation>История правок</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="249"/>
+        <location filename="../qml/pages/ThreadView.qml" line="250"/>
         <source>Alternative formatting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="254"/>
+        <location filename="../qml/pages/ThreadView.qml" line="255"/>
         <source>Show replied to post</source>
         <translation type="unfinished"></translation>
     </message>

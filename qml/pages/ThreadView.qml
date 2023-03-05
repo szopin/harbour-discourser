@@ -231,6 +231,7 @@ Page {
                           "</style>" +
                           "<p>" + cooked + "</p>"
                     width: parent.width
+                    baseUrl: forumSource.value
                     textFormat: Text.RichText
                     wrapMode: Text.Wrap
                     font.pixelSize: Theme.fontSizeSmall
