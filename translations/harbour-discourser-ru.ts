@@ -155,19 +155,24 @@ Special thanks to contributors:
 <context>
     <name>PostView</name>
     <message>
-        <location filename="../qml/pages/PostView.qml" line="50"/>
+        <location filename="../qml/pages/PostView.qml" line="61"/>
         <source>Previous</source>
         <translation>Назад</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PostView.qml" line="56"/>
+        <location filename="../qml/pages/PostView.qml" line="55"/>
         <source>Next</source>
         <translation>Далее</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PostView.qml" line="67"/>
+        <location filename="../qml/pages/PostView.qml" line="72"/>
         <source>Revision history</source>
         <translation>История правок</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/PostView.qml" line="72"/>
+        <source>Alternative formatting</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -222,22 +227,22 @@ Special thanks to contributors:
 <context>
     <name>ThreadView</name>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="111"/>
+        <location filename="../qml/pages/ThreadView.qml" line="127"/>
         <source>Open in external browser</source>
         <translation>Открыть в браузере</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="115"/>
+        <location filename="../qml/pages/ThreadView.qml" line="131"/>
         <source>Open directly</source>
         <translation>Открыть в приложении</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="120"/>
+        <location filename="../qml/pages/ThreadView.qml" line="136"/>
         <source>Search thread</source>
         <translation>Искать в теме</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ThreadView.qml" line="174"/>
+        <location filename="../qml/pages/ThreadView.qml" line="190"/>
         <source>%n like(s)</source>
         <translation>
             <numerusform>%n нравится</numerusform>
@@ -246,14 +251,24 @@ Special thanks to contributors:
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="190"/>
+        <location filename="../qml/pages/ThreadView.qml" line="206"/>
         <source>✍️: %1</source>
         <translation>✍️: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="213"/>
+        <location filename="../qml/pages/ThreadView.qml" line="244"/>
         <source>Revision history</source>
         <translation>История правок</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ThreadView.qml" line="249"/>
+        <source>Alternative formatting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ThreadView.qml" line="254"/>
+        <source>Show replied to post</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

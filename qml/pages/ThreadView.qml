@@ -34,13 +34,17 @@ Page {
     property int likes
     property int post_id
     property int highest_post_number
-    property int post_number
+    //property int post_number
     readonly property string source: forumSource.value + "t/" + topicid
     property string loadmore: source + "/posts.json?post_ids[]="
     property int topicid
     property string url
+    property int last_post: 0
+    property int post_number: -1
     property string aTitle
     property int posts_count
+    property var reply_to
+    property bool accepted_answer
 
     function appendPosts(posts) {
         var posts_length = posts.length;
@@ -57,10 +61,22 @@ Page {
                 created_at: post.created_at,
                 version: post.version,
                 postid: post.id,
+                last_postid: last_post,
+                post_number: post.post_number,
+                reply_to: post.reply_to_post_number,
+                accepted_answer: post.accepted_answer
             });
+            last_post = post.post_number;
         }
     }
-
+    function findOP(filter){
+        console.log(commodel.count)
+        for (var j=0; j < commodel.count; j++){
+            if (commodel.get(j).post_number == filter){
+                pageStack.push(Qt.resolvedUrl("PostView.qml"), {postid: commodel.get(j).postid, aTitle: "Replied to post", cooked: commodel.get(j).cooked, username: commodel.get(j).username});
+            }
+        }
+    }
     function getcomments(){
         var xhr = new XMLHttpRequest;
         xhr.open("GET", source + ".json");
@@ -192,6 +208,20 @@ Page {
                             font.pixelSize: Theme.fontSizeSmall
                             anchors.right: parent.right
                         }
+                        Label {
+                            text: reply_to >0 && reply_to !== last_postid ?  "💬"  : ""
+                            color: Theme.secondaryColor
+                            font.pixelSize: Theme.fontSizeSmall
+                            anchors.right: parent.right
+                        }
+                        Icon {
+                            visible: accepted_answer
+                            source: "image://theme/icon-s-accept"
+                            width: Theme.iconSizeSmall
+                            height: width
+                            anchors.right: parent.right
+                            opacity: Theme.opacityLow
+                        }
                     }
                 }
 
@@ -208,10 +238,22 @@ Page {
                 }
             }
             menu: ContextMenu {
-                hasContent: version > 1 && updated_at !== created_at
+                hasContent: (version > 1 && updated_at !== created_at) || (cooked.indexOf("<code") !== -1) || (reply_to > 0 && reply_to !== last_postid)
                 MenuItem {
+                    visible: version > 1 && updated_at !== created_at
                     text: qsTr("Revision history")
                     onClicked: pageStack.push(Qt.resolvedUrl("PostView.qml"), {postid: postid, aTitle: aTitle, curRev: version});
+                }
+                MenuItem {
+                    visible: cooked.indexOf("<code") !== -1
+                    text: qsTr("Alternative formatting")
+                    onClicked: pageStack.push(Qt.resolvedUrl("PostView.qml"), {postid: postid, aTitle: aTitle, curRev: version, cooked: cooked});
+                }
+                MenuItem {
+                    visible: reply_to > 0 && reply_to !== last_postid
+                    text: qsTr("Show replied to post")
+                    onClicked: findOP(reply_to);
+
                 }
             }
         }

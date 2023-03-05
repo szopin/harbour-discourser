@@ -153,19 +153,24 @@ Special thanks to contributors:
 <context>
     <name>PostView</name>
     <message>
-        <location filename="../qml/pages/PostView.qml" line="50"/>
+        <location filename="../qml/pages/PostView.qml" line="61"/>
         <source>Previous</source>
         <translation>前一页</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PostView.qml" line="56"/>
+        <location filename="../qml/pages/PostView.qml" line="55"/>
         <source>Next</source>
         <translation>后一页</translation>
     </message>
     <message>
-        <location filename="../qml/pages/PostView.qml" line="67"/>
+        <location filename="../qml/pages/PostView.qml" line="72"/>
         <source>Revision history</source>
         <translation>修改历史</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/PostView.qml" line="72"/>
+        <source>Alternative formatting</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -220,36 +225,46 @@ Special thanks to contributors:
 <context>
     <name>ThreadView</name>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="111"/>
+        <location filename="../qml/pages/ThreadView.qml" line="127"/>
         <source>Open in external browser</source>
         <translation>用外部浏览器打开</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="115"/>
+        <location filename="../qml/pages/ThreadView.qml" line="131"/>
         <source>Open directly</source>
         <translation>直接打开</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="120"/>
+        <location filename="../qml/pages/ThreadView.qml" line="136"/>
         <source>Search thread</source>
         <translation>搜索帖子</translation>
     </message>
     <message numerus="yes">
-        <location filename="../qml/pages/ThreadView.qml" line="174"/>
+        <location filename="../qml/pages/ThreadView.qml" line="190"/>
         <source>%n like(s)</source>
         <translation>
             <numerusform>%n 个赞</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="190"/>
+        <location filename="../qml/pages/ThreadView.qml" line="206"/>
         <source>✍️: %1</source>
         <translation>✍️: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="213"/>
+        <location filename="../qml/pages/ThreadView.qml" line="244"/>
         <source>Revision history</source>
         <translation>修改历史</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ThreadView.qml" line="249"/>
+        <source>Alternative formatting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ThreadView.qml" line="254"/>
+        <source>Show replied to post</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

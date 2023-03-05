@@ -5,12 +5,15 @@ Page {
     id: posthistory
     allowedOrientations: Orientation.All
     property int postid
+    property int vmode
     property int curRev
     property string prevRev
     property string nexRev
+    property string cooked
     property string aTitle
     property string revisions
     property string titles
+    property string username
 
     function getcomments(i){
             var xhr = new XMLHttpRequest;
@@ -31,31 +34,33 @@ Page {
     BusyIndicator {
         id: vplaceholder
         anchors.centerIn: parent
-        running: !revisions
+        running: !revisions && !cooked
         size: BusyIndicatorSize.Large
     }
 
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
-        visible: revisions
+        visible: revisions || cooked
         contentHeight: content.height
 
         Component.onCompleted: posthistory.getcomments(curRev);
 
         VerticalScrollDecorator {}
-PullDownMenu{
-            MenuItem {
-                visible: curRev > prevRev && curRev > 2
-                text: qsTr("Previous")
+    PullDownMenu{
+        visible: (curRev > prevRev && curRev > 2) || curRev < nexRev
 
-                onClicked: getcomments(curRev -1)
-                            }
             MenuItem {
                 visible: curRev < nexRev
                 text: qsTr("Next")
 
                 onClicked: getcomments(curRev +1)
+            }
+            MenuItem {
+                visible: curRev > prevRev && curRev > 2
+                text: qsTr("Previous")
+
+                onClicked: getcomments(curRev -1)
             }
         }
         Column {
@@ -64,8 +69,8 @@ PullDownMenu{
 
             PageHeader {
                 id: pageHeader
-                title: qsTr("Revision history")
-                description: aTitle
+                title: cooked ? username ? username : qsTr("Alternative formatting") : qsTr("Revision history")
+                description: cooked ? "" : aTitle
             }
 
             Label {
@@ -76,13 +81,13 @@ PullDownMenu{
                     left: parent.left
                     right: parent.right
                 }
-                text: "<style> " +
+                text: cooked ? cooked : "<style> " +
                             "del { color:" + Theme.secondaryColor + "};</style><style> " +
                             "ins { " +
                             "  color: " + Theme.highlightColor + ";" +
                             "} " +
                             "</style>" +titles + "</p>" +revisions
-                textFormat: Text.RichText
+                textFormat: cooked ? username ? Text.RichText : Text.StyledText : Text.RichText
                 wrapMode: Text.Wrap
                 font.pixelSize: Theme.fontSizeSmall
                 onLinkActivated: pageStack.push("OpenLink.qml", {link: link});
