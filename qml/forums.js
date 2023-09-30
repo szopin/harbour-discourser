@@ -22,7 +22,6 @@ var list = [
     { url: "https://discuss.ocaml.org/",            title: "OCaml"},
     { url: "https://forum.openwrt.org/",            title: "OpenWrt"},
     { url: "https://discuss.pixls.us/",             title: "PIXLS.US"},
-    { url: "https://forum.privacytools.io/",        title: "PrivacyTools"},
     { url: "https://forums.puri.sm/",               title: "PureOS"},
     { url: "https://forum.bestpractical.com/",      title: "Request Tracker (IR)"},
     { url: "https://community.revolut.com/",        title: "Revolut"},
@@ -30,6 +29,7 @@ var list = [
     { url: "https://discourse.differentk.fyi/",     title: "SpecialK"},
     { url: "https://discuss.tindie.com/",           title: "Tindie"},
     { url: "https://discourse.ubuntu.com/",         title: "Ubuntu"},
+    { url: "https://winraid.level1techs.com/",      title: "Win-Raid"},
     { url: "https://discuss.zerotier.com/",         title: "ZeroTierOne"},
     { url: defaultSource,                           title: defaultTitle},
 ]
