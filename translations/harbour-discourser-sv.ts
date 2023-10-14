@@ -171,7 +171,7 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/PostView.qml" line="72"/>
         <source>Alternative formatting</source>
-        <translation type="unfinished"></translation>
+        <translation>Aternativ formatering</translation>
     </message>
 </context>
 <context>
@@ -257,12 +257,12 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="256"/>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiera till urklipp</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="260"/>
         <source>Copy link to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiera länk till urklipp</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="265"/>
@@ -272,12 +272,12 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="270"/>
         <source>Alternative formatting</source>
-        <translation type="unfinished"></translation>
+        <translation>Alternativ formatering</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="275"/>
         <source>Show replied to post</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa den post som svarats på</translation>
     </message>
 </context>
 <context>
