@@ -21,7 +21,6 @@ Page {
         xhr.onreadystatechange = function() {
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 var data = JSON.parse(xhr.responseText);
-             //   prevRev = data.previous_revision
                 curRev = data.current_revision
                 nexRev = data.last_revision
                 revisions = data.body_changes.side_by_side_markdown
