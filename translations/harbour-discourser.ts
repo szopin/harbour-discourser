@@ -148,22 +148,22 @@ Special thanks to contributors:
 <context>
     <name>PostView</name>
     <message>
-        <location filename="../qml/pages/PostView.qml" line="61"/>
+        <location filename="../qml/pages/PostView.qml" line="60"/>
         <source>Previous</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PostView.qml" line="55"/>
+        <location filename="../qml/pages/PostView.qml" line="54"/>
         <source>Next</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PostView.qml" line="72"/>
+        <location filename="../qml/pages/PostView.qml" line="71"/>
         <source>Revision history</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/PostView.qml" line="72"/>
+        <location filename="../qml/pages/PostView.qml" line="71"/>
         <source>Alternative formatting</source>
         <translation type="unfinished"></translation>
     </message>
