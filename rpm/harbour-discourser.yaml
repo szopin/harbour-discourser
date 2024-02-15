@@ -35,12 +35,6 @@ Requires:
   - sailfishsilica-qt5 >= 0.10.9
   - libsailfishapp-launcher
 
->> macros
-# Define (S)RPM compression sensibly, see
-# https://forum.sailfishos.org/t/13153/23
-_binary_payload;w2.xzdio
-<< macros
-
 # All installed files
 Files:
   - '%defattr(0644,root,root,-)'
