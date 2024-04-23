@@ -36,6 +36,8 @@ Page {
     property int pageno: 0
     property string viewmode
     property string textname
+    property var tags: ""
+    property var ttags: ""
     property string combined: forumSource.value + (tid ? "c/" + tid : viewmode) + ".json?page=" + pageno
     property bool networkError: false
     property bool loadedMore: false
@@ -72,11 +74,17 @@ Page {
 
                 var topics_length = topics.length;
                 for (var i=0;i<topics_length;i++) {
+
                     var topic = topics[i];
+                    tags = ""
+                    if (topic.tags) tags = topic.tags.join(" ");
+                    tags ?  ttags = tags : ttags = ""
                     list.model.append({ title: topic.title,
                                           topicid: topic.id,
+                        has_accepted_answer: topic.has_accepted_answer,
                                           posts_count: topic.posts_count,
                                           bumped: topic.bumped_at,
+                        ttags: ttags,
                                           category_id: topic.category_id
                                       });
                 }
@@ -157,6 +165,7 @@ Page {
                 text: qsTr("Change forum")
                 onClicked: pageStack.push("SitePage.qml");
             }
+
             MenuItem {
                 text: qsTr("Search")
                 onClicked: pageStack.push("SearchPage.qml");
@@ -187,12 +196,13 @@ Page {
         model: ListModel { id: model}
         VerticalScrollDecorator {}
         Component.onCompleted: {
+          //  console.log(forumSource.value.slice(8));
             showLatest();
         }
 
-        delegate: BackgroundItem {
+        delegate: ListItem {
             width: parent.width
-            height: delegateCol.height + Theme.paddingLarge
+            contentHeight: normrow.height + Theme.paddingLarge
 
             Column {
                 id: delegateCol
@@ -205,8 +215,16 @@ Page {
                 }
 
                 Row {
+                    id: normrow
                     width: parent.width
                     spacing: 1.5*Theme.paddingMedium
+
+                    Column {
+                        width: postsLabel.width
+                        height: childrenRect.height
+                //        anchors.top: parent.top
+                        spacing: Theme.paddingSmall
+
                     Label {
                         id: postsLabel
                         text: posts_count
@@ -216,16 +234,25 @@ Page {
                         color: Theme.primaryColor
                         opacity: Theme.opacityHigh
                         height: 1.2*Theme.fontSizeSmall; width: height
-                        horizontalAlignment: Text.AlignHCenter
-                        verticalAlignment: Text.AlignVCenter
-                        anchors.top: parent.top
+                       horizontalAlignment: Text.AlignHCenter
+                //        verticalAlignment: Text.AlignVCenter
+              //          anchors.top: parent.top
 
                         Rectangle {
-                            anchors.centerIn: parent
+                     //       anchors.centerIn: parent
                             width: parent.width+Theme.paddingSmall; height: parent.height
                             radius: 20
                             opacity: Theme.opacityLow
                             color: Theme.secondaryColor
+                        }
+                        }
+                    Icon {
+                            visible: has_accepted_answer
+                       //     anchors.top: postsLabel.bottom
+                            source: "image://theme/icon-s-accept"
+                            width: Theme.iconSizeSmall
+                            height: width
+                            opacity: Theme.opacityLow
                         }
                     }
 
@@ -241,7 +268,7 @@ Page {
 
                         Row {
                            width: parent.width
-                           spacing: Theme.paddingMedium
+                           spacing: 1.5*Theme.paddingMedium
 
                            Label {
                                id: dateLabel
@@ -255,6 +282,7 @@ Page {
                                horizontalAlignment: Text.AlignLeft
                            }
 
+
                            Label {
                                visible: catRect.visible
                                text: categories.lookup[category_id].name
@@ -267,6 +295,7 @@ Page {
                                horizontalAlignment: Text.AlignRight
                            }
 
+
                            Rectangle {
                                id: catRect
                                visible: tid === ""
@@ -277,7 +306,22 @@ Page {
                                anchors.verticalCenter: parent.verticalCenter
                                opacity: Theme.opacityLow
                            }
-                        }
+                                }
+                            Row {
+                            visible: ttags
+                            width: parent.width
+                            spacing: 1.5* Theme.paddingMedium
+                            Label {
+                                id: tags
+                                visible: ttags
+                                text: qsTr("tags") + ": " + ttags
+                                wrapMode: Text.Wrap
+                                 elide: Text.ElideRight
+                                width: parent.width
+                                }
+                            }
+
+
 
                     }
                 }

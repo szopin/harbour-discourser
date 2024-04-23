@@ -24,6 +24,7 @@ DISTFILES += qml/harbour-discourser.qml \
     qml/pages/SearchPage.qml \
     qml/pages/ThreadView.qml \
     qml/pages/webView.qml \
+    qml/pages/worker.js \
     rpm/harbour-discourser.changes.in \
     rpm/harbour-discourser.changes.run.in \
     rpm/harbour-discourser.spec \

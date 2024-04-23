@@ -19,6 +19,7 @@ var list = [
     { url: "https://community.home-assistant.io/",  title: "Home Assistant"},
     { url: "https://we.incognito.org/",             title: "Incognito"},
     { url: "https://discuss.kde.org/",              title: "KDE"},
+    { url: "https://discuss.linuxcontainers.org/",  title: "LXC"},
     { url: "https://forum.manjaro.org/",            title: "Manjaro"},
     { url: "https://mixxx.discourse.group/",        title: "MIXXX"},
     { url: "https://community.monzo.com/",          title: "Monzo"},

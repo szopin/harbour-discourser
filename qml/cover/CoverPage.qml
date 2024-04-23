@@ -119,7 +119,7 @@ CoverBackground {
                 wrapMode: Text.Wrap; font.pixelSize: Theme.fontSizeMedium
                 opacity: Theme.opacityHigh
                 //: part of 'SailfishOS Forum Viewer'
-                text: qsTr("Forum Viewer")
+                text: qsTr("Discourser")
                 color: Theme.highlightColor
                 maximumLineCount: 5
                 truncationMode: TruncationMode.Fade
