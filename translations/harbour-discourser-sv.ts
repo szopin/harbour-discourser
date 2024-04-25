@@ -87,7 +87,7 @@ Speciellt tack till medverkande:
         <location filename="../qml/cover/CoverPage.qml" line="122"/>
         <source>Discourser</source>
         <extracomment>part of &apos;SailfishOS Forum Viewer&apos;</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Discourser</translation>
     </message>
 </context>
 <context>
@@ -135,7 +135,7 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="317"/>
         <source>tags</source>
-        <translation type="unfinished"></translation>
+        <translation>taggar</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="340"/>
@@ -249,7 +249,7 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="217"/>
         <source>tags</source>
-        <translation type="unfinished"></translation>
+        <translation>taggar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="335"/>
@@ -284,7 +284,7 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="411"/>
         <source>Uncensor post</source>
-        <translation type="unfinished"></translation>
+        <translation>Avcensurera inlägg</translation>
     </message>
 </context>
 <context>
