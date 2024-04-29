@@ -126,9 +126,10 @@ Page {
                 var action = post.actions_summary[0];
                 likes = action && action.id === 2
                         ? action.count : 0;
-                post.cooked_hidden !== undefined ? cooked_hidden = post.cooked_hidden : cooked_hidden = false
 
             }
+                post.cooked_hidden !== undefined ? cooked_hidden = post.cooked_hidden : cooked_hidden = false
+
             avatar = post.avatar_template
             avatar.indexOf("https") >= 0 ? avatar = avatar : avatar = forumSource.value.substring(0, forumSource.value.length - 1)  +  avatar
 

@@ -28,7 +28,6 @@ DISTFILES += qml/harbour-discourser.qml \
     rpm/harbour-discourser.changes.in \
     rpm/harbour-discourser.changes.run.in \
     rpm/harbour-discourser.spec \
-    rpm/harbour-discourser.yaml \
     translations/*.ts \
     harbour-discourser.desktop
 
