@@ -232,17 +232,17 @@ Speciellt tack till medverkande:
 <context>
     <name>ThreadView</name>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="231"/>
+        <location filename="../qml/pages/ThreadView.qml" line="235"/>
         <source>Open in external browser</source>
         <translation>Öppna i extern webbläsare</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="235"/>
+        <location filename="../qml/pages/ThreadView.qml" line="239"/>
         <source>Open directly</source>
         <translation>Öppna direkt</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="240"/>
+        <location filename="../qml/pages/ThreadView.qml" line="244"/>
         <source>Search thread</source>
         <translation>Sök tråd</translation>
     </message>
@@ -252,37 +252,38 @@ Speciellt tack till medverkande:
         <translation>taggar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="336"/>
+        <location filename="../qml/pages/ThreadView.qml" line="340"/>
         <source>✍️: %1</source>
         <translation>✍️: %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="387"/>
+        <location filename="../qml/pages/ThreadView.qml" line="391"/>
         <source>Copy to clipboard</source>
         <translation>Kopiera till urklipp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="391"/>
+        <location filename="../qml/pages/ThreadView.qml" line="231"/>
+        <location filename="../qml/pages/ThreadView.qml" line="395"/>
         <source>Copy link to clipboard</source>
         <translation>Kopiera länk till urklipp</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="396"/>
+        <location filename="../qml/pages/ThreadView.qml" line="400"/>
         <source>Revision history</source>
         <translation>Revisionshistorik</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="401"/>
+        <location filename="../qml/pages/ThreadView.qml" line="405"/>
         <source>Alternative formatting</source>
         <translation>Alternativ formatering</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="406"/>
+        <location filename="../qml/pages/ThreadView.qml" line="410"/>
         <source>Show replied to post</source>
         <translation>Visa den post som svarats på</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ThreadView.qml" line="412"/>
+        <location filename="../qml/pages/ThreadView.qml" line="416"/>
         <source>Uncensor post</source>
         <translation>Avcensurera inlägg</translation>
     </message>
