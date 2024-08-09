@@ -44,5 +44,6 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += \
     translations/harbour-discourser-ru.ts \
     translations/harbour-discourser-sv.ts \
+    translations/harbour-discourser-it.ts \
     translations/harbour-discourser-zh_CN.ts
 
