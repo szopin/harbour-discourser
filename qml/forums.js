@@ -18,6 +18,7 @@ var list = [
     { url: "https://forum.garudalinux.org/",        title: "Garuda Linux"},
     { url: "https://discuss.atom.io/",              title: "Github Atom"},
     { url: "https://discourse.gnome.org/",          title: "Gnome"},
+    { url: "https://discuss.haiku-os.org/",         title: "Haiku"},
     { url: "https://discourse.haskell.org/",        title: "Haskell"},
     { url: "https://community.home-assistant.io/",  title: "Home Assistant"},
     { url: "https://discuss.huggingface.co/",       title: "Huggingface"},

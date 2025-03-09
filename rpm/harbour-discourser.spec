@@ -9,7 +9,7 @@ Name:       harbour-discourser
 # << macros
 
 Summary:    Viewer for discourse-based forums
-Version:    0.9.6
+Version:    0.9.7
 Release:    1
 Group:      Qt/Qt
 License:    MIT
