@@ -33,112 +33,112 @@ Page {
     allowedOrientations: Orientation.All
 
     function findFirstPage() {
-        return pageStack.find(function(page) { return page.hasOwnProperty('viewmode'); });
+        return pageStack.find(function(page) { return page.hasOwnProperty('viewmode') });
     }
 
-   SilicaListView {
-       id:list
+    SilicaListView {
+        id:list
 
-       BusyIndicator {
-           visible: running
-           running: categories.model.count === 0 && !categories.networkError
-           anchors.centerIn: parent
-           size: BusyIndicatorSize.Large
-       }
+        BusyIndicator {
+            visible: running
+            running: categories.model.count === 0 && !categories.networkError
+            anchors.centerIn: parent
+            size: BusyIndicatorSize.Large
+        }
 
-       ViewPlaceholder {
-           enabled: categories.model.count === 0 && categories.networkError
-           text: qsTr("Nothing to show")
-           hintText: qsTr("Is the network enabled?")
-       }
+        ViewPlaceholder {
+            enabled: categories.model.count === 0 && categories.networkError
+            text: qsTr("Nothing to show")
+            hintText: qsTr("Is the network enabled?")
+        }
 
-       header: Column {
-           width: list.width; height: childrenRect.height
-           spacing: 0
+        header: Column {
+            width: list.width; height: childrenRect.height
+            spacing: 0
 
-           PageHeader {
-               id: pageHeader
-               title: qsTr("Categories")
-           }
+            PageHeader {
+                id: pageHeader
+                title: qsTr("Categories")
+            }
 
-           Row {
-               anchors.horizontalCenter: pageHeader.horizontalCenter
-               spacing: Theme.paddingSmall
+            Row {
+                anchors.horizontalCenter: pageHeader.horizontalCenter
+                spacing: Theme.paddingSmall
 
-               Button {
-                   text: qsTr("Latest")
-                   onClicked: {
-                       findFirstPage().showLatest();
-                       pageStack.navigateBack();
-                   }
-               }
-               Button {
-                   text: qsTr("Top")
-                   onClicked: {
-                       findFirstPage().showTop();
-                       pageStack.navigateBack();
-                   }
-               }
-           }
+                Button {
+                    text: qsTr("Latest")
+                    onClicked: {
+                        findFirstPage().showLatest();
+                        pageStack.navigateBack();
+                    }
+                }
+                Button {
+                    text: qsTr("Top")
+                    onClicked: {
+                        findFirstPage().showTop();
+                        pageStack.navigateBack();
+                    }
+                }
+            }
 
-           Item { width: parent.width; height: 2*Theme.paddingMedium }
-       }
+            Item { width: parent.width; height: 2*Theme.paddingMedium }
+        }
 
-       footer: Item { width: parent.width; height: Theme.horizontalPageMargin }
+        footer: Item { width: parent.width; height: Theme.horizontalPageMargin }
 
-       anchors.top: header.bottom
-       width: parent.width
-       height: parent.height
+        anchors.top: header.bottom
+        width: parent.width
+        height: parent.height
 
-       VerticalScrollDecorator {}
-       model: categories.model
-       spacing: Theme.paddingLarge
+        VerticalScrollDecorator {}
+        model: categories.model
+        spacing: Theme.paddingLarge
 
-       delegate: ListItem {
-           id: item
-           width: parent.width
-           contentHeight: contentCol.height
-           onClicked: {
-               findFirstPage().showCategory(slug + "/" + topic, name);
-               pageStack.navigateBack();
-           }
+        delegate: ListItem {
+            id: item
+            width: ListView.view.width
+            contentHeight: contentCol.height
 
-           Rectangle {
-               id: rect
-               anchors {
-                   left: parent.left; leftMargin: Theme.horizontalPageMargin
-                   verticalCenter: contentCol.verticalCenter
-               }
-               height: contentCol.height*0.95
-               width: Theme.horizontalPageMargin/3
-               color: '#'+model.color
-               radius: 30
-           }
+            onClicked: {
+                findFirstPage().showCategory( ((is_subcategory) ? categories.lookup[parent_category_id].slug + "/" : "") + slug + "/" + topic, name, topic_template, topic);
+                pageStack.navigateBack();
+            }
+            Rectangle {
+                id: rect
+                anchors {
+                    left: parent.left; leftMargin: Theme.horizontalPageMargin
+                    verticalCenter: contentCol.verticalCenter
+                }
+                height: contentCol.height*0.95
+                width: Theme.horizontalPageMargin/3
+                color: '#'+model.color
+                radius: 30
+            }
 
-           Column {
-               id: contentCol
-               width: parent.width - 2*Theme.horizontalPageMargin - rect.width - Theme.paddingMedium
-               anchors {
-                   right: parent.right
-                   rightMargin: Theme.horizontalPageMargin
-               }
+            Column {
+                id: contentCol
+                width: parent.width - 2*Theme.horizontalPageMargin - rect.width - Theme.paddingMedium
+                anchors {
+                    right: parent.right
+                    rightMargin: Theme.horizontalPageMargin
+                }
 
-               Label {
-                   width: parent.width
-                   text: name
-                   wrapMode: Text.Wrap
-               }
+                Label {
+                    width: parent.width
+                    text: (is_subcategory ? categories.lookup[parent_category_id].name + ": " : "" ) + name
+                    wrapMode: Text.Wrap
+                }
 
-               Label {
-                   width: parent.width
-                   elide: Text.ElideRight
-                   textFormat: Text.RichText
-                   text: description_text
-                   wrapMode: Text.Wrap
-                   font.pixelSize: Theme.fontSizeExtraSmall
-                   color: Theme.secondaryColor
-               }
-           }
-       }
-   }
+                Label {
+                    width: parent.width
+                    elide: Text.ElideRight
+                    textFormat: Text.RichText
+                    text: description_text
+                    wrapMode: Text.Wrap
+                    font.pixelSize: Theme.fontSizeExtraSmall
+                    color: Theme.secondaryColor
+                }
+            }
+        }
+    }
 }

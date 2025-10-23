@@ -30,9 +30,14 @@ import Sailfish.Silica 1.0
 
 
 Page {
+    id: page
+    allowedOrientations: Orientation.All
+
+
     property string initialSearch
     property int searchid
     property string aTitle
+    property var forconf
     readonly property string searchstring: {
         var res = forumSource.value + "search.json?"
         if (searchid) {
@@ -91,9 +96,6 @@ Page {
         forceActiveFocus()
     }
 
-    id: page
-    allowedOrientations: defaultAllowedOrientations
-
     onStatusChanged: {
         if (status === PageStatus.Active) {
             if (initialSearch) {
@@ -148,7 +150,7 @@ Page {
             onClicked: {
                 var name = list.model.get(index).name
                 if(haveResults) {
-                    pageStack.push("ThreadView.qml", {"aTitle": title, "topicid": topicid, "post_number": post_number, "posts_count": posts_count, "post_id": post_id, "highest_post_number": highest_post_number});
+                    pageStack.push("ThreadView.qml", {"aTitle": title, "topicid": topicid, "post_number": post_number, "posts_count": posts_count, "post_id": post_id, "highest_post_number": highest_post_number, "forconf": forconf});
                 }
             }
         }

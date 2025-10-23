@@ -108,18 +108,18 @@ CoverBackground {
             Label {
                 width: parent.width; horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.WrapAtWordBoundaryOrAnywhere; font.pixelSize: Theme.fontSizeLarge
-                //: part of 'SailfishOS Forum Viewer'
-                text: qsTr("SailfishOS")
+
+                text: qsTr("Discourser")
                 color: Theme.highlightColor
                 opacity: 1.0
             }
 
             Label {
                 width: parent.width; horizontalAlignment: Text.AlignHCenter
-                wrapMode: Text.Wrap; font.pixelSize: Theme.fontSizeMedium
+                wrapMode: Text.WrapAtWordBoundaryOrAnywhere; font.pixelSize: Theme.fontSizeMedium
                 opacity: Theme.opacityHigh
-                //: part of 'SailfishOS Forum Viewer'
-                text: qsTr("Discourser")
+
+                text: forumSource.value //qsTr("Discourser")
                 color: Theme.highlightColor
                 maximumLineCount: 5
                 truncationMode: TruncationMode.Fade

@@ -19,10 +19,18 @@ DISTFILES += qml/harbour-discourser.qml \
     qml/forums.js \
     qml/pages/About.qml \
     qml/pages/CategorySelect.qml \
+    qml/pages/Error.qml \
     qml/pages/FirstPage.qml \
+    qml/pages/LoginPage.qml \
+    qml/pages/LoginWeb.qml \
+    qml/pages/NewPost.qml \
+    qml/pages/NewThread.qml \
+    qml/pages/Notifications.qml \
     qml/pages/OpenLink.qml \
+    qml/pages/PollView.qml \
     qml/pages/SearchPage.qml \
     qml/pages/ThreadView.qml \
+    qml/pages/UserCard.qml \
     qml/pages/webView.qml \
     qml/pages/worker.js \
     rpm/harbour-discourser.changes.in \

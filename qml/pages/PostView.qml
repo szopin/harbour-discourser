@@ -14,17 +14,19 @@ Page {
     property string revisions
     property string titles
     property string username
+    property string loggedin: "-1"
 
     function getcomments(i){
             var xhr = new XMLHttpRequest;
         xhr.open("GET", forumSource.value + "posts/" + postid + "/revisions/" + i + ".json");
+        if (loggedin !== "-1") xhr.setRequestHeader("User-Api-Key", loggedin);
         xhr.onreadystatechange = function() {
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 var data = JSON.parse(xhr.responseText);
                 curRev = data.current_revision
                 nexRev = data.last_revision
                 revisions = data.body_changes.side_by_side_markdown
-                titles = data.title_changes.inline
+                if(data.title_changes != null) titles = data.title_changes.inline
             }
         }
         xhr.send();

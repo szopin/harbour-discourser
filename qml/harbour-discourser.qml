@@ -40,11 +40,13 @@ ApplicationWindow
     // ================================
     // ATTENTION: UPDATE BEFORE RELEASE
     // --------------------------------
-    readonly property string appVersion: "0.9.7"
+    readonly property string appVersion: "1.0.0"
     // ================================
 
     property bool fetching: false
+    property string login
     property var latest: ListModel{id: latest}
+    property var forconf: forumSource.value.replace(/\./g, "").replace(/\//g, "").replace(/https:/g, "")
     //: date format including date and time but no weekday
     readonly property string dateTimeFormat: qsTr("d/M/yyyy '('hh':'mm')'")
     readonly property string _configPath: "/org/szopin/harbour-discourser/"
@@ -56,7 +58,8 @@ ApplicationWindow
 
         function fetch() {
             var xhr = new XMLHttpRequest;
-            xhr.open("GET", forumSource.value + "categories.json");
+            xhr.open("GET", forumSource.value + "categories.json?include_subcategories=true");
+            if (loggedin.value && (loggedin.value != -1)) xhr.setRequestHeader("User-Api-Key", loggedin.value);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     if (xhr.responseText === "") {
@@ -69,19 +72,31 @@ ApplicationWindow
                     model.clear();
                     lookup = {};
 
-                    for (var i = 0; i < data.category_list.categories.length; i++) {
-                        var item = data.category_list.categories[i];
+                    function addCategory(item, isSub) {
                         var append = {
                             name: item['name'],
                             topic: item['id'],
                             color: item['color'],
                             topic_count: item['topic_count'],
                             description_text: item['description_text'],
-                            slug: item['slug']
+                            slug: item['slug'],
+                            topic_template: item['topic_template'],
+                            is_subcategory: (!!isSub),
+                            parent_category_id: isSub ? item['parent_category_id'] : -1
                         };
-
                         lookup[item['id']] = append;
                         model.append(append);
+                    }
+
+                    for (var i = 0; i < data.category_list.categories.length; i++) {
+                        var item = data.category_list.categories[i];
+                        addCategory(item, false);
+                        if (item['has_children']) {
+                            for (var j = 0; j < item.subcategory_list.length; j++) {
+                                addCategory(item.subcategory_list[j], true);
+                            }
+                        }
+
                     }
 
                     lookupChanged();
@@ -91,8 +106,12 @@ ApplicationWindow
         }
     }
 
+
+
     signal reload()
     onReload: {
+        login = mainConfig.value("key", "-1");
+        mainConfig.setValue("key", login);
         fetchLatestPosts();
 
         if (categories.model.count === 0) {
@@ -109,6 +128,7 @@ ApplicationWindow
         fetching = true
         var xhr = new XMLHttpRequest;
         xhr.open("GET", forumSource.value + "latest.json");
+        if (loggedin.value && (loggedin.value != "-1")) xhr.setRequestHeader("User-Api-Key", loggedin.value);
         xhr.onreadystatechange = function() {
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 if (xhr.responseText !== "") {
@@ -133,6 +153,16 @@ ApplicationWindow
     Component.onCompleted: {
         categories.fetch();
         fetchLatestPosts();
+    }
+
+            ConfigurationGroup {
+        id: mainConfig
+        path: "/org/szopin/harbour-discourser/" + forconf
+    }
+    ConfigurationValue {
+        id: loggedin
+        key: "/org/szopin/harbour-discourser/" + forconf  + "/key"
+        onValueChanged: fetchLatestPosts()
     }
 
     ConfigurationValue {
