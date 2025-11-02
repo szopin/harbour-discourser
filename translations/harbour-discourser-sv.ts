@@ -88,12 +88,12 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/Error.qml" line="11"/>
         <source>Error:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fel:</translation>
     </message>
     <message>
         <location filename="../qml/pages/Error.qml" line="15"/>
         <source>An unknown Error occurred.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ett okänt fel inträffade.</translation>
     </message>
 </context>
 <context>
@@ -101,7 +101,7 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="55"/>
         <source>Logging out</source>
-        <translation type="unfinished"></translation>
+        <translation>Loggar ut</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="177"/>
@@ -117,59 +117,59 @@ Speciellt tack till medverkande:
         <location filename="../qml/pages/FirstPage.qml" line="201"/>
         <source>Muted</source>
         <comment>Topic watch level (state)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tystad</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="202"/>
         <source>Mute</source>
         <comment>Topic watch action (verb)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Tysta</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="206"/>
         <source>Normal</source>
         <comment>Topic watch level (state)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Normal</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="207"/>
         <source>Normal</source>
         <comment>Topic watch action (verb)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Normal</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="211"/>
         <source>Tracking</source>
         <comment>Topic watch level (state)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Spårning</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="212"/>
         <source>Track</source>
         <comment>Topic watch action (verb)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Spåra</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="216"/>
         <source>Watching</source>
         <comment>Topic watch level (state)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Bevakar</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="217"/>
         <source>Watch</source>
         <comment>Topic watch action (verb)</comment>
-        <translation type="unfinished"></translation>
+        <translation>Bevaka</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="307"/>
         <source>Login</source>
-        <translation type="unfinished"></translation>
+        <translation>Logga in</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="313"/>
         <source>Logout</source>
-        <translation type="unfinished"></translation>
+        <translation>Logga ut</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="318"/>
@@ -184,7 +184,7 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="326"/>
         <source>New thread</source>
-        <translation type="unfinished"></translation>
+        <translation>Ny tråd</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="332"/>
@@ -194,7 +194,7 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="337"/>
         <source>Notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Aviseringar</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="342"/>
@@ -219,12 +219,12 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="530"/>
         <source>Mark as read</source>
-        <translation type="unfinished"></translation>
+        <translation>Märk som läst</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="575"/>
         <source>Don&apos;t track (local)</source>
-        <translation type="unfinished"></translation>
+        <translation>Spåra inte (lokalt)</translation>
     </message>
     <message>
         <location filename="../qml/pages/FirstPage.qml" line="608"/>
@@ -237,27 +237,27 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/NewPost.qml" line="124"/>
         <source>Upload image (through ImgBB)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ladda upp bild (genom ImgBB)</translation>
     </message>
     <message>
         <location filename="../qml/pages/NewPost.qml" line="129"/>
         <source>Insert quote</source>
-        <translation type="unfinished"></translation>
+        <translation>Infoga citat</translation>
     </message>
     <message>
         <location filename="../qml/pages/NewPost.qml" line="136"/>
         <source>Enter post</source>
-        <translation type="unfinished"></translation>
+        <translation>Skicka inlägg</translation>
     </message>
     <message>
         <location filename="../qml/pages/NewPost.qml" line="136"/>
         <source>Edit post</source>
-        <translation type="unfinished"></translation>
+        <translation>Redigera inlägg</translation>
     </message>
     <message>
         <location filename="../qml/pages/NewPost.qml" line="148"/>
         <source>Body</source>
-        <translation type="unfinished"></translation>
+        <translation>Brödtext</translation>
     </message>
 </context>
 <context>
@@ -265,22 +265,22 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/NewThread.qml" line="33"/>
         <source>Enter thread</source>
-        <translation type="unfinished"></translation>
+        <translation>Skicka tråd</translation>
     </message>
     <message>
         <location filename="../qml/pages/NewThread.qml" line="33"/>
         <source>Enter PM to </source>
-        <translation type="unfinished"></translation>
+        <translation>Skicka PM till </translation>
     </message>
     <message>
         <location filename="../qml/pages/NewThread.qml" line="40"/>
         <source>Title</source>
-        <translation type="unfinished"></translation>
+        <translation>Titel</translation>
     </message>
     <message>
         <location filename="../qml/pages/NewThread.qml" line="51"/>
         <source>Body</source>
-        <translation type="unfinished"></translation>
+        <translation>Brödtext</translation>
     </message>
 </context>
 <context>
@@ -289,40 +289,40 @@ Speciellt tack till medverkande:
         <location filename="../qml/pages/Notifications.qml" line="180"/>
         <location filename="../qml/pages/Notifications.qml" line="218"/>
         <source>Notifications</source>
-        <translation type="unfinished"></translation>
+        <translation>Aviseringar</translation>
     </message>
     <message>
         <location filename="../qml/pages/Notifications.qml" line="180"/>
         <location filename="../qml/pages/Notifications.qml" line="197"/>
         <source>PMs</source>
-        <translation type="unfinished"></translation>
+        <translation>PM</translation>
     </message>
     <message>
         <location filename="../qml/pages/Notifications.qml" line="180"/>
         <location filename="../qml/pages/Notifications.qml" line="207"/>
         <source>PMs - sent</source>
-        <translation type="unfinished"></translation>
+        <translation>PM - skickade</translation>
     </message>
     <message>
         <location filename="../qml/pages/Notifications.qml" line="180"/>
         <location filename="../qml/pages/Notifications.qml" line="187"/>
         <source>Muted topics</source>
-        <translation type="unfinished"></translation>
+        <translation>Tystade rubriker</translation>
     </message>
     <message>
         <location filename="../qml/pages/Notifications.qml" line="243"/>
         <source>Nothing to show</source>
-        <translation type="unfinished">Inget att visa</translation>
+        <translation>Inget att visa</translation>
     </message>
     <message>
         <location filename="../qml/pages/Notifications.qml" line="244"/>
         <source>Is the network enabled?</source>
-        <translation type="unfinished">Är nätverket aktiverat?</translation>
+        <translation>Är nätverket aktiverat?</translation>
     </message>
     <message>
         <location filename="../qml/pages/Notifications.qml" line="264"/>
         <source>Unmute</source>
-        <translation type="unfinished"></translation>
+        <translation>Tysta inte</translation>
     </message>
 </context>
 <context>
@@ -343,83 +343,83 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/PollView.qml" line="42"/>
         <source>Single Answer Poll</source>
-        <translation type="unfinished"></translation>
+        <translation>Enkelvalsomröstning</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="43"/>
         <source>Multiple Answer Poll</source>
-        <translation type="unfinished"></translation>
+        <translation>Flervalsomrösting</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="44"/>
         <source>Rating Poll</source>
-        <translation type="unfinished"></translation>
+        <translation>Betygsomröstning</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="45"/>
         <source>Unsupported Poll</source>
-        <translation type="unfinished"></translation>
+        <translation>Omröstning utan stöd</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="56"/>
         <source>This poll has more than %1 options, this is not supported.</source>
-        <translation type="unfinished"></translation>
+        <translation>Denna omröstning har fler än %1 svarsalternativ, detta stöds ej.</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="57"/>
         <location filename="../qml/pages/PollView.qml" line="63"/>
         <source>Please go back and open the poll in a browser window.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gå tillbaka och öppna omröstningen i ett webbläsarfönster.</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="62"/>
         <source>This type of poll is not yet supported: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Denna typ av omröstning stöds ännu inte: %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="101"/>
         <source>Voters: %1 Status: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Deltagare: %1 Status: %2</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="101"/>
         <source>submitted</source>
-        <translation type="unfinished"></translation>
+        <translation>inskickat</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="101"/>
         <source>not logged in</source>
-        <translation type="unfinished"></translation>
+        <translation>ej inloggad</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="134"/>
         <source>Votes: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Röster: %1</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="197"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Återställ</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="203"/>
         <source>Submit</source>
-        <translation type="unfinished"></translation>
+        <translation>Skicka in</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="211"/>
         <source>View Results</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa resultat</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="211"/>
         <source>Vote</source>
-        <translation type="unfinished"></translation>
+        <translation>Rösta</translation>
     </message>
     <message>
         <location filename="../qml/pages/PollView.qml" line="211"/>
         <source>View Votes</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa röster</translation>
     </message>
 </context>
 <context>
@@ -523,19 +523,19 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="71"/>
         <source>Filtering user</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtrerar användare</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="468"/>
         <location filename="../qml/pages/ThreadView.qml" line="495"/>
         <source>Post reply</source>
-        <translation type="unfinished"></translation>
+        <translation>Posta svar</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="473"/>
         <location filename="../qml/pages/ThreadView.qml" line="486"/>
         <source>Back to full thread</source>
-        <translation type="unfinished"></translation>
+        <translation>Tillbaka till tråden</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="608"/>
@@ -545,22 +545,22 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="663"/>
         <source>This post contains polls.</source>
-        <translation type="unfinished"></translation>
+        <translation>Detta inlägg innehåller omröstningar.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="664"/>
         <source>This post contains a poll.</source>
-        <translation type="unfinished"></translation>
+        <translation>Detta inlägg innehåller en omröstning.</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="665"/>
         <source>Click to view and vote:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tryck för att visa och rösta:</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="683"/>
         <source>Poll</source>
-        <translation type="unfinished"></translation>
+        <translation>Omröstning</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="693"/>
@@ -570,32 +570,32 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="713"/>
         <source>Show replied to post(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa svar till inlägg</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="729"/>
         <source>Like</source>
-        <translation type="unfinished"></translation>
+        <translation>Gilla</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="734"/>
         <source>Reply</source>
-        <translation type="unfinished"></translation>
+        <translation>Svara</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="739"/>
         <source>Unlike</source>
-        <translation type="unfinished"></translation>
+        <translation>Gilla inte</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="744"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Redigera</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="749"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Ta bort</translation>
     </message>
     <message>
         <location filename="../qml/pages/ThreadView.qml" line="450"/>
@@ -624,7 +624,7 @@ Speciellt tack till medverkande:
     <message>
         <location filename="../qml/pages/UserCard.qml" line="151"/>
         <source>PM</source>
-        <translation type="unfinished"></translation>
+        <translation>PM</translation>
     </message>
 </context>
 <context>
